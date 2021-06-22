@@ -1,12 +1,11 @@
 # SW-Convergence-Design-Team4
 SW Convergence Design Team4
 
-# 농아인들을 위한 의료용 수어통역 서비스
+농아인들을 위한 의료용 수어통역 서비스
 
 팀원: 이재희, 이중원, 이기혁, 윤상현, Erife
 
-https://docs.google.com/document/d/1v3X7vOD9--f7HnAmCP2wSPb_o6quEagoJRzpkcB9bdE/edit#heading=h.jmneb4y4ftc6
-
+![image](https://user-images.githubusercontent.com/33821003/122867899-363c2100-d365-11eb-9b0e-19fc672384c7.png)
 
 ## 데이터 라벨과 개수
 가슴 - 31
