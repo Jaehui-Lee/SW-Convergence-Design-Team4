@@ -1,0 +1,63 @@
+{
+  "one_second_interval_classification_annotations": [ {
+    "annotation_spec": {
+      "display_name": "어디",
+      "description": "어디"
+    },
+    "frames": [ {
+      "time_offset": {
+        "seconds": 3,
+        "nanos": 280000000
+      },
+      "confidence": 0.88381678
+    }, {
+      "time_offset": {
+        "seconds": 4,
+        "nanos": 280000000
+      },
+      "confidence": 0.45494407
+    } ]
+  }, {
+    "annotation_spec": {
+      "display_name": "안내소",
+      "description": "안내소"
+    },
+    "frames": [ {
+      "time_offset": {
+        "seconds": 1,
+        "nanos": 280000000
+      },
+      "confidence": 0.92485482
+    }, {
+      "time_offset": {
+        "seconds": 2,
+        "nanos": 280000000
+      },
+      "confidence": 0.90224922
+    } ]
+  }, {
+    "annotation_spec": {
+      "display_name": "있다",
+      "description": "있다"
+    },
+    "frames": [ {
+      "time_offset": {
+        "seconds": 4,
+        "nanos": 280000000
+      },
+      "confidence": 0.3068068
+    }, {
+      "time_offset": {
+        "seconds": 5,
+        "nanos": 280000000
+      },
+      "confidence": 0.96307158
+    }, {
+      "time_offset": {
+        "seconds": 5,
+        "nanos": 680000000
+      },
+      "confidence": 0.96407562
+    } ]
+  } ]
+}

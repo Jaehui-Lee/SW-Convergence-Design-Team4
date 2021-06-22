@@ -1,0 +1,5 @@
+Flask
+pandas
+opencv-python==4.2.0.32
+google-cloud
+google-cloud-automl

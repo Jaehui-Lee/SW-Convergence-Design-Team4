@@ -1,0 +1,33 @@
+{
+  "one_second_interval_classification_annotations": [ {
+    "annotation_spec": {
+      "display_name": "검사",
+      "description": "검사"
+    },
+    "frames": [ {
+      "time_offset": {
+        "seconds": 1,
+        "nanos": 280000000
+      },
+      "confidence": 0.94034636
+    }, {
+      "time_offset": {
+        "seconds": 2,
+        "nanos": 280000000
+      },
+      "confidence": 0.94619197
+    }, {
+      "time_offset": {
+        "seconds": 3,
+        "nanos": 280000000
+      },
+      "confidence": 0.9286961
+    }, {
+      "time_offset": {
+        "seconds": 3,
+        "nanos": 400000000
+      },
+      "confidence": 0.9322803
+    } ]
+  } ]
+}

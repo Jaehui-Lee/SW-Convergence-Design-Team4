@@ -1,0 +1,682 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>KNU Sign Language Translation Service</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/plugins.css') }}" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}" />
+
+        <script src="{{ url_for('static', filename='assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<div class='preloader'>
+            <div class='loaded'>
+                &nbsp;
+            </div>
+        </div>
+        <div id="menubar" class="main-menu">	
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <h5 style="font-size:30px; font-weight: bold;">S.L.T Service</h5>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--Home page style-->
+        <header id="home" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="homepage-style">
+                        <div class="top-arrow hidden-xs text-center"><img src="{{ url_for('static', filename='ssets/images/top-arrow.png') }}" alt="" /></div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="unique-apps">
+                                <h2>SIGN LANGUAGE TRANSLATOR<br>WEB SERVICE </h2>
+                                <p style="font-size: 18px; text-align: left; vertical-aling: middle;">
+                                    수화통역서비스(SLT)는 수화영상을 한국어로 번역해주는 서비스이며<br>AutoML Video Intelligence를 이용하여 수화영상을 단어로 나누고<br>AutoML Natural Language를 이용해 자연스러운 문장으로 완성합니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="slider-area">
+
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox" style="margin-top:-30px; margin-left:30px;">
+
+                                        <div class="item active">
+                                            <img src="{{ url_for('static', filename='assets/images/ad01.png') }}" style="margin-top:-30px;" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="{{ url_for('static', filename='assets/images/ad02.png') }}" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="{{ url_for('static', filename='assets/images/ad03.png') }}" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="{{ url_for('static', filename='assets/images/ad04.png') }}" alt="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>	
+                </div>
+
+            </div>
+
+        </header>
+                
+        <!-- Sections -->
+
+
+        <section id="video-test" class="sections">
+            <div class="container">
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/left-arrow.png') }}" alt="" />
+                        <h4 class="">VIDEO TEST</h4>
+                    </div>
+                </div>
+                <style>
+                    .video-test-box{
+                            margin-top: -20px;
+                            width:100%;
+                            height:500px;
+                            border: 3px solid #ffc038;
+                            padding:15px;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                    }
+                </style>
+                <div class="video-test-box">
+                    <div class="video-upload">
+                        <form action = "/fileupload">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <video style="margin-left: 23%;" class="input-video" width="600" height="400" controls>
+                                    <source src={{ url_for('static', filename=data) }} type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <br>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <style>
+                                    .file-button{
+                                        padding: 6px 25px;
+                                        background-color:#FF6600;
+                                        border-radius: 4px;
+                                        color: white;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                <div style="float: center; margin-top:-35px;">
+                                    <p>{{ result }}</p>
+                                </div>
+                                <div style="float: right;">
+                                    <label class="file-button" for="input-file">파일 선택</label>
+                                    <input style="display: none" type = "file" id="input-file" name = "videofile"/>
+                                    <label class="file-button" for="submit-file">실행</label>
+                                    <button style="display: none" id="submit-file" value = "upload"/>
+                                </div>
+                            </div>                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-team" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/left-arrow.png') }}" alt="" />
+
+                        <h4 class="">Our Team Members</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid project-bg">
+                <div class="row">
+                    
+                    <div class="main-team text-center">
+                        
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="team-member">
+
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member11.png') }}" alt="" />
+                                <h5>JEONG MYEONG HOON</h5>
+                                <p>MENTOR</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="team-member">
+
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member22.png') }}" alt="" />
+                                <h5>LEE JAE HUI</h5>
+                                <p>TAEM LEADER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member33.png') }}" alt="" />
+                                <h5>LEE JWOON WON</h5>
+                                <p>DEVELOPER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member44.png') }}" alt="" />
+                                <h5>LEE KI HYEOK</h5>
+                                <p>DEVELOPER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member55.png') }}" alt="" />
+                                <h5>YOON SANG HYEON</h5>
+                                <p>DEVELOPER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="{{ url_for('static', filename='assets/images/team/member66.png') }}" alt="" />
+                                <h5>ERIFE</h5>
+                                <p>DEVELOPER</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="our-portfolio" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-right">
+                            <h4 class="">OUR PROJECT </h4>
+                            <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/right-arrow.png') }}" alt="" />
+
+                        </div>
+                    </div>	
+
+
+                    <!-- Example row of columns --> 
+                    <div class="portfolio-wrap">
+                        <div class="portfolio">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <img src="{{ url_for('static', filename='assets/images/hello.gif') }}" alt="" />
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <style>
+                                    .portfolio-item .direction-img{
+                                        text-align: center;
+                                        margin-left: 30px;
+                                        height : 30px;
+                                        object-fit: cover;
+                                    }
+                                </style>
+                                <div class="portfolio-item" style="margin-left:-20px; margin-top:80px;">
+                                    <h4 style="margin-top:-30px;">WEB DESIGN</h4>
+                                    <img class="direction-img" src="{{ url_for('static', filename='assets/images/right-arrow-line.PNG') }}" alt="" />
+                                    <h4 style="margin-top:15px;">AutoML Web Service</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <p style="text-align: center; vertical-align: middle; margin-top:80px; font-size: 30px;">"안녕하세요"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /container -->       
+        </section>
+
+        <section id="AutoML" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-left">
+                            <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/left-arrow.png') }}" alt="" />
+    
+                            <h4 class="">WHAT IS AUTOML? </h4>
+                        </div>
+                    </div>
+                    <div class="automl-content">
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <style>
+                                .automl-title .automl-img{ text-align: center; }
+                            </style>
+                            <div class="automl-title">
+                                <img class="automl-img" src="{{ url_for('static', filename='assets/images/automl2.png') }}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <style>
+                                p{ text-align: center; margin-top: 5%; font-size: 20px; font-weight: bold; line-height: 1.2em; font-family: 'roboto', sans-serif;}
+                            </style>
+                            <div class="automl-explain">
+                                <p style="text-align:left;">
+                                    AutoML은 머신러닝에 대한 지식이 부족한 개발자도<br>머신러닝을 활용할 수 있게 도와주는 Google Cloud Service입니다. <br>AutoML을 사용해 Google의 머신러닝 기능을 기반으로 빌드하여 비즈니스 요구에 맞는<br>자체 커스텀 머신러닝 모델을 직접 만들고 애플리케이션과 웹 사이트에 통합할 수 있습니다. <br>통합 AI Platform에서 AutoML Natural Language, AutoML Tables,<br>AutoML Video Intelligence, AutoML Vision 등을 사용할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="AutoML-Details" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <style>
+                        .Detail{
+                            margin-top: -20px;
+                            width:100%;
+                            height:500px;
+                            border: 3px solid #ffc038; 
+                            padding:15px;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                        }
+                        .Detail .automl-img{
+                            margin-top: 40px;
+                        }
+                        .Sequence{
+                            margin-top: 100px;
+                            margin-left: 50px;
+                        }
+                        .AutoML-Details-h4{
+                            margin-top: -80px;
+                            font-size: 24px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            text-align:center;
+                            background: #fff;
+                            color: #111111;
+                            padding:5px 60px;
+                            display: inline;
+                        }
+                        .Sequence .automl-img{
+                            margin-left: 60px;
+                            width: 80%;
+                            height: 80%;
+                            object-fit: cover;
+                        }
+                    </style>
+                    <h4 class="AutoML-Details-h4">AutoML</h4>
+                    <div class="Detail">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <img class="automl-img" src="{{ url_for('static', filename='assets/images/automl-video.png') }}" alt="" />
+                            <p style="text-align: left; vertical-align: middle; font-size: 25px;">
+                                <br>AutoML Video Intelligence을 사용하면<br>직접 정의한 라벨에 따라 동영상의 장면과 세그먼트를<br>분류하도록 머신러닝 모델을 학습시킬 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <img class="automl-img" src="{{ url_for('static', filename='assets/images/automl-nlp.png') }}" alt="" />
+                            <p style="text-align: left; margin-top: 40px; font-size: 25px;">
+                                <br>AutoML Natural Language를 사용하면<br>문서를 분석하여 분류, 문서 내 항목을 식별,<br>또는 문서 내의 태도를 평가하는<br> 커스텀 머신러닝 모델을 빌드하고 배포할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Sequence">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <img class="automl-img" src="{{ url_for('static', filename='assets/images/automl-sequence.png') }}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-make" class="sections">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-right">
+                            <h4 class="">HOW TO MAKE </h4>
+                            <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/right-arrow.png') }}" alt="" />
+                        </div>
+                    </div>
+                    <style>
+                        h4 { margin-left: 30px; }
+                        .video-intelligence .video-intelligence-content{
+                            margin-top: -20px;
+                            width:100%;
+                            height:2500px;
+                            border: 3px solid #ffc038;
+                            padding:15px;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                        }
+                        .video-intelligence .video-intelligence-content .video-intelligence-img{
+                            margin-top: 50px;
+                            margin-left: 100px;
+                        }
+                        .video-intelligence .video-intelligence-content .video-intelligence-v{
+                            margin-top: 100px;
+                            margin-left: 10px;
+                        }
+                        .how-to-make-h4{
+                            font-size: 24px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            text-align:center;
+                            background: #fff;
+                            color: #111111;
+                            padding:5px 60px;
+                            display: inline;
+                        }
+                        .nlp{
+                            margin-top: 100px;
+                        }
+                        .nlp .nlp-sequence{
+                            margin-top: -20px;
+                            width:100%;
+                            height:500px;
+                            border: 3px solid #ffc038;
+                            padding:15px;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                        }
+                        .nlp .nlp-sequence .automl-img{
+                            margin-top: 70px;
+                            margin-left: 10px;
+                        }
+                        .web{
+                            margin-top: 100px;
+                        }
+                        .web .web-sequence{
+                            margin-top: -20px;
+                            width:100%;
+                            height:500px;
+                            border: 3px solid #ffc038;
+                            padding:15px;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+                        }
+                        .web .web-sequence .automl-img{
+                            margin-top: 30px;
+                            margin-left: 10px;
+                        }
+                        .web .web-sequence .direction-img{
+                            margin-top: 215px;
+                            margin-left: 50px;
+                            height : 18px;
+                            object-fit: cover;
+                        }
+                    </style>
+                    <div class="video-intelligence">
+                        <h4 class="how-to-make-h4">VIDEO INTELLIGENCE</h4>
+                        <div class="video-intelligence-content">
+                            <img class="video-intelligence-img" src="{{ url_for('static', filename='assets/images/video-intelligence-content2.png') }}" alt=""/>
+                            <img class="video-intelligence-v" src="{{ url_for('static', filename='assets/images/v1.png') }}" alt=""/>
+                            <img class="video-intelligence-v" src="{{ url_for('static', filename='assets/images/v2.png') }}" alt=""/>
+                            <img class="video-intelligence-v" src="{{ url_for('static', filename='assets/images/v3.png') }}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="nlp">
+                        <style>
+                            
+                        </style>
+                        <h4 class="how-to-make-h4">NLP</h4>
+                        <div class="nlp-sequence">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <img class="automl-img" src="{{ url_for('static', filename='assets/images/nlp-data-code-model3.png') }}" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web">
+                        <h4 class="how-to-make-h4">WEB</h4>
+                        <div class="web-sequence">
+                            <img class="automl-img" src="{{ url_for('static', filename='assets/images/webinfo.png') }}" alt="" />
+                        </div>
+                    </div>
+                </div>	
+            </div>
+        </section>
+
+        <section id="our-history" class="sections">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="main-history">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="{{ url_for('static', filename='assets/images/meeting1.png') }}" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="{{ url_for('static', filename='assets/images/meeting2.jpg') }}" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="{{ url_for('static', filename='assets/images/meeting3.png') }}" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="{{ url_for('static', filename='assets/images/meeting4.jpg') }}" alt="" />
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="history-wrapper">
+                                <div class="history-heading"> 
+                                    <h5 class="our-history">Our History</h5>
+                                </div>
+                                <style>
+                                    .history-content-p{ text-align: left; margin-left: 20px; margin-top: -5px;}
+                                </style>
+                                <div class="history-content">
+                                    <p class="history-content-p">
+                                        2021/03/05 - First Meeting<br>
+                                        2021/03/09 - Idea Meeting<br>
+                                        2021/03/26 - Learning AutoML<br>
+                                        2021/03/30 - Select Words from Sentence<br>
+                                        2021/04/06 - AutoML Video Model Learning<br>
+                                        2021/04/13 - Ready for Presentation<br>
+                                        2021/05/01 - AutoML NLP Model Learning<br>
+                                        2021/05/11 - Model Test and Making Web<br>
+                                        2021/05/18 - Additional Model Learning<br>
+                                        2021/05/25 - Upload web to Google Server<br>
+                                        2021/06/01 - Ready for Presentation<br>
+                                    </p>
+
+                                    <p class="history-content-p">
+                                        2021/03/14 - Mentoring<br>
+                                        2021/03/27 - Mentoring<br>
+                                        2021/04/10 - Mentoring<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shortcoming-development" class="sections">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="main-content">
+                        <style>
+                            .shortcoming-development-h5{ 
+                                color: #ffffff;
+                                height:50px;
+                                background-color:#464646;
+                                width: 230px;
+                                text-transform: uppercase;
+                                font-size: 18px;
+                                font-weight:600;
+                                margin-top:-30px;
+                                margin-bottom:20px;
+                                text-align: center;
+                                padding-top: 10px;
+                            }
+                            .shortcoming-development-direction .direction-img{
+                                text-align: center;
+                                height: 30px;
+                            }
+                            .shortcoming-development-h4{
+                                font-weight: bold;
+                                text-align: left;
+                                margin-left: 10px;
+                            }
+
+                        </style>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="shortcoming-wrapper">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h5 class="shortcoming-development-h5">Our Shortcoming</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h5 class="shortcoming-development-h5">Our Development</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="shortcoming-development-direction">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 1. 데이터 부족</h4>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <img class="direction-img" src="{{ url_for('static', filename='assets/images/right-arrow-line.PNG') }}" alt="" />
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 1. 다양한 단어, 다양한 사람의 데이터 구하기</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="shortcoming-development-direction">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 2. Real-time 제한</h4>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <img class="direction-img" src="{{ url_for('static', filename='assets/images/right-arrow-line.PNG') }}" alt="" />
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 2. AutoML을 사용하지 않고 직접 모델링</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="shortcoming-development-direction">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 3. 수어에 대한 전문성 부족</h4>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                    <img class="direction-img" src="{{ url_for('static', filename='assets/images/right-arrow-line.PNG') }}" alt="" />
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <h4 class="shortcoming-development-h4"> 3. 전문 수어 통역사의 조언 받기</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final" class="sections">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-left">
+                            <img class="hidden-xs" src="{{ url_for('static', filename='assets/images/left-arrow.png') }}" alt="" />
+                            <h4 class="">FINALIZING THE PROJECT... </h4>
+                        </div>
+                        <style>
+                            .final-content{
+                                margin-top: 50px;
+                                width:100%;
+                                height:500px;
+                                border: 3px solid #ffc038; 
+                                padding:15px;
+                                border-radius: 10px;
+                                box-sizing: border-box;
+                            }
+                        </style>
+                        <div class="final-content">
+                            <p style="text-align:left; margin-top:10px;">재희 : AutoML을 공부하면서 그동안 어렵게 생각했던 머신러닝을 쉽게 이해할 수 있었고,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 동시에 Cloud Service, Web, Docker 등에 대해서도 공부할 수 있는 좋은 경험이었습니다.</p>
+                            <p style="text-align:left; margin-top:40px;">중원 : 데이터 수집부터 학습, 분석, 클라우드에 서비스를 올리기까지 데이터 분석 시스템을 만드는 전체의 과정을 겪었는데, 정말 힘들었습니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 하지만 데이터 처리, Docker, Cloud등 많은 것을 배운 것 같아 굉장히 뜻깊은 경험이었습니다. 다들 고생하셨습니다 ㅎㅎ!</p>
+                            <p style="text-align:left; margin-top:40px;">기혁 : 복수전공자로써 이번 프로젝트를 하면서 많은 피해가 가진 않을까라는 걱정을 안고시작했습니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 그러나 좋은 팀원들을 만나게 되어저의 발전에 이바지할 수 있었고 하나의 완성된 서비스를 만들 수 있어보람을 느꼈습니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 저희 팀원 분들께 감사함을 전하고 싶습니다.</p>
+                            <p style="text-align:left; margin-top:40px;">상현 : 머신러닝부터 웹개발까지의 과정에서 많은 프로그래밍언어와 툴이 쓰이며 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 각자 상호작용을 하는것을 알았고 많은것을 배웠고 앞으로도 배워야겠다고 느꼈다. </p>
+                            <p style="text-align:left; margin-top:40px;">Erife : It is a great feeling seeing the project come to life from an idea,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  that we thought might be really difficult and maybe undoable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static', filename='assets/js/vendor/jquery-1.11.2.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/vendor/bootstrap.min.js') }}"></script>
+
+        <script src="{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    </body>
+</html>

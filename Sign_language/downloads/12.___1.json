@@ -1,0 +1,21 @@
+{
+  "one_second_interval_classification_annotations": [ {
+    "annotation_spec": {
+      "display_name": "어깨",
+      "description": "어깨"
+    },
+    "frames": [ {
+      "time_offset": {
+        "seconds": 1,
+        "nanos": 280000000
+      },
+      "confidence": 0.80590421
+    }, {
+      "time_offset": {
+        "seconds": 1,
+        "nanos": 840000000
+      },
+      "confidence": 0.69450998
+    } ]
+  } ]
+}
